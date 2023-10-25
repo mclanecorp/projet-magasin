@@ -151,6 +151,37 @@ ul {
   font-weight: bold;
   border-bottom: 2px solid #252422;
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #252422;
+  color: #f5f4f6;
+}
+.liens_contacter {
+  background-color: #ee3c4d;
+  padding: 10px 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 60px;
+  color: white;
+}
+.develloped {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.text_dev {
+  margin-bottom: 5px;
+}
+.text_dev.membre {
+  font-weight: bold;
+  color: #eb5e28;
+}
 /*--------------------------------------*/
 @media (max-width: 768px) {
   .box_card {
