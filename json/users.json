@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "image": "http://localhost:8888/CEFIM/src/images/avatar.png",
+        "name": "John Doe",
+        "work": "Software Developer",
+        "desc": "Passionate about coding and building cool software."
+    },
+    {
+        "id": 1,
+        "image": "http://localhost:8888/CEFIM/src/images/avatar.png",
+        "name": "Jane Smith",
+        "work": "Web Designer",
+        "desc": "Creating beautiful and user-friendly web interfaces."
+    },
+    {
+        "id": 2,
+        "image": "http://localhost:8888/CEFIM/src/images/avatar.png",
+        "name": "Bob Johnson",
+        "work": "Data Analyst",
+        "desc": "Analyzing data to uncover valuable insights."
+    }
+  ]

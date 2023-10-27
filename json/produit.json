@@ -1,0 +1,79 @@
+[
+    {
+        "id" : 0,
+        "image": "/asset/2.jpg",
+        "categorie": "pc",
+        "all": "all",
+        "description1": "Ryzen 5",
+        "description2": "Nvidia 1080",
+        "description3": "32 giga ram",
+        "prix": "896 Euros"
+        
+    },
+    {
+        "id" : 1,
+        "image": "/asset/3.jpg",
+        "categorie": "pc",
+        "all": "all",
+        "description1": "Ryzen 7",
+        "description2": "RTX 4060",
+        "description3": "32 giga ram",
+        "prix": "1200 Euros"
+
+    },
+    {
+        "id" : 2,
+        "image": "/asset/4.jpg",
+        "categorie": "pc",
+        "all": "all",
+        "description1": "Intel core i7",
+        "description2": "RTX 4080",
+        "description3": "16 giga ram",
+        "prix": "999 Euros"
+
+    },
+    {
+        "id" : 3,
+        "image": "/asset/5.jpg",
+        "categorie": "laptop",
+        "all": "all",
+        "description1": "Intel core i5",
+        "description2": "RTX 3080 ti",
+        "description3": "16 giga ram",
+        "prix": "699 Euros"
+
+    },
+    {
+        "id" : 4,
+        "image": "/asset/6.jpg",
+        "categorie": "clavier",
+        "all": "all",
+        "description1": "Clavier mécanique",
+        "description2": "Rgb",
+        "description3": "Souris offerte",
+        "prix": "699 Euros"
+
+    },
+    {
+        "id" : 5,
+        "image": "/asset/7.jpg",
+        "categorie": "ecran",
+        "all": "all",
+        "description1": "27 pouces",
+        "description2": "1080p",
+        "description3": "240 hertz",
+        "prix": "399 Euros"
+
+    },
+    {
+        "id" : 6,
+        "image": "/asset/8.jpg",
+        "categorie": "pc",
+        "all": "all",
+        "description1": "AMD Ryzen 9",
+        "description2": "AMD radeon 7900",
+        "description3": "16 giga ram",
+        "prix": "1050 Euros"
+
+    }
+]

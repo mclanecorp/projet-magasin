@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style-melody.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <title>Panier</title>
+    <script src="/javascript/app-melody.js" type="module" defer></script>
+  </head>
+
+  <body>
+
+    <header>
+      <nav>
+        <div class="logo">
+          <p class="text2">LA BOUTIQUE</p>
+        </div>
+        <div class="liens_nav ">
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-solid fa-store" id="icones"></i>Magasin</a
+              >
+            </li>
+            <li>
+              <a href="panier.html" class="active"><i class="fa-solid fa-cart-shopping" id="icones"></i></i>Panier</a>
+            </li>
+            <li>
+              <a href="teams.html"><i class="fa-solid fa-user-group" id="icones"></i>Equipe</a>
+            </li>
+          </ul>
+        </div>
+       
+      </nav>
+    </header>
+<main>
+    <section>
+
+      <header>
+        <h1 class="section-title">Votre panier</h1>
+        <div class="table">
+          <div class="description">Description</div>
+          <div>Prix</div>
+          <div>Quantité</div>
+          <div class="table-total">Total</div>
+        </div>
+      </header>
+
+      <div>
+        <div class="item">
+          <div class="img-detail-container">
+            <div class="item-image">
+              <img src="/asset/2.jpg" alt="PC 1"/>
+            </div>
+            <div class="item-detail-container">
+              <h3 class="item-detail item-title">Ryzen 5</h2>
+              <p class="item-detail">Nvidia 1080</p>
+              <p class="item-detail">32 giga ram</p>
+            </div>
+          </div>
+
+          <div class="item-price">
+            <h3><span class="price">896</span> Euros</h3>
+          </div>
+
+          <div class="item-quantity">
+            <a href=""><i class="fa-solid fa-minus"></i></a>
+            <input name="quantity" type="text" value="1"/> 
+            <a href=""><i class="fa-solid fa-plus"></i></a>
+            <a href=""><i class="fa-regular fa-trash-can"></i></a>
+          </div>
+
+          <div class="item-total">
+            <h3><span class="sous-total">896</span> Euros</h3>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="item">
+          <div class="img-detail-container">
+            <div class="item-image">
+              <img src="/asset/7.jpg" alt="PC 1"/>
+            </div>
+            <div class="item-detail-container">
+              <h3 class="item-detail item-title">&Eacute;cran 27 pouces</h2>
+              <p class="item-detail">1080p</p>
+              <p class="item-detail">240 hertz</p>
+            </div>
+          </div>
+
+          <div class="item-price">
+            <h3><span class="price">399</span> Euros</h3>
+          </div>
+
+          <div class="item-quantity">
+            <a href=""><i class="fa-solid fa-minus"></i></a>
+            <input name="quantity" type="text" value="2"/> 
+            <a href=""><i class="fa-solid fa-plus"></i></a>
+            <a href=""><i class="fa-regular fa-trash-can"></i></a>
+          </div>
+
+          <div class="item-total">
+            <h3><span class="sous-total">798</span> Euros</h3>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="item">
+          <div class="img-detail-container">
+            <div class="item-image">
+              <img src="/asset/6.jpg" alt="PC 1"/>
+            </div>
+            <div class="item-detail-container">
+              <h3 class="item-detail item-title">Clavier mécanique</h2>
+              <p class="item-detail">Rgb</p>
+              <p class="item-detail">Souris offerte</p>
+            </div>
+          </div>
+
+          <div class="item-price">
+            <h3><span class="price">699</span> Euros</h3>
+          </div>
+
+          <div class="item-quantity">
+            <a href=""><i class="fa-solid fa-minus"></i></a>
+            <input name="quantity" type="text" value="1"/> 
+            <a href=""><i class="fa-solid fa-plus"></i></a>
+            <a href=""><i class="fa-regular fa-trash-can"></i></a>
+          </div>
+
+          <div class="item-total">
+            <h3><span class="sous-total">699</span> Euros</h3>
+          </div>
+        </div>
+      </div>
+
+      <footer class="total-container">
+        <p class="total-text">Total de votre commande : <span id="total">2393</span> €</p>
+      </footer>
+
+    </section>
+
+  </main>
+    <footer>
+      <div class="contact">
+          <a href="contact.html" class="liens_contacter">Nous Contacter</a>
+      </div>
+      <div class="copyright">
+          <p class="text_copyright">copyright all rights reserved</p>
+      </div>
+      <div class="develloped">
+          <p class="text_dev">Developed by :</p>
+          <p class="text_dev membre">Melody Germond</p>
+          <p class="text_dev membre">Thomas Gitton</p>
+          <p class="text_dev membre">Damien Buisson</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

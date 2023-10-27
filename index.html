@@ -1,173 +1,123 @@
+
+<!-------------------------coded by Damien Buisson------------------------------------------>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <title>Magasin</title>
   </head>
+  <div class="modal-container">
+    <div class="overlay modal-trigger"></div>
+    <div class="modal">
+      <button class="close-modal modal-trigger">X</button>
+      <form
+          action="mailto:mclanecorp@proton.me?subject=Fomulaire Mon javascript"
+          name="envoi"
+          method="POST"
+          enctype="text/plain"
+        >
+          
+          <div class="box_mail">
+              <label for="email">E-mail</label>
+              <input type="text" name="mail" id="email" class="input_modal" />
+          </div>
+          <div class="box_message">
+              <label for="messages">Message</label>
+              <textarea name="message" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="box_btn_envoyer">
+            <input
+              type="submit"
+              value="envoyer"
+              name="envoyer"
+              class="btn_envoyer"
+              onclick="claim()"
+            />
+          </div>
+        </form>
+    </div>
+  </div>
   <body>
     <header>
       <nav>
         <div class="logo">
-            <i class="fa-brands fa-wizards-of-the-coast fa-2xl" id="logo"></i>
+            <p class="text2">LA BOUTIQUE</p>
             </div>
         </div>
-        <div class="liens_nav">
+        <div class="liens_nav ">
           <ul>
             <li>
-              <a href=""
+              <a href="index.html" class="active"
                 ><i class="fa-solid fa-store" id="icones"></i>Magasin</a
               >
             </li>
             <li>
-              <a href=""><i class="fa-solid fa-cart-shopping" id="icones"></i></i>Paniers</a>
+              <a href="panier.html"><i class="fa-solid fa-cart-shopping" id="icones"></i></i>Panier</a>
+            </li>
+            <li>
+              <a href="teams.html"><i class="fa-solid fa-user-group" id="icones"></i>Equipe</a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu_burger">
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-solid fa-store" id="icones"></i>Magasin</a
+              >
+            </li>
+            <li>
+              <a href="panier.html"><i class="fa-solid fa-cart-shopping" id="icones"></i></i>Paniers</a>
             </li>
             <li>
               <a href=""><i class="fa-solid fa-user-group" id="icones"></i>Equipes</a>
             </li>
           </ul>
         </div>
+        <div class="burger">
+            <a href="teams.html" class="logo_burger" id="logo_burger"><i class="fa-solid fa-bars fa-2xl" style="color: #fafafa;"></i></a>
+        </div>
       </nav>
     </header>
     <section class="banniere">
         <div class="box_text_banniere">
-            <p class="text_banniere">Meilleur offre du mois</p>
-            <a href="" class="btn_banniere">Voir l'offre</a>
-        </div>
-        <div class="box_img_banniere">
-            <img src="/asset/Bg_banner.jpg" alt="photo ordinateur promo">
+            <span class="text1">Bienvenue dans</span>
+            <span class="text2">la boutique</span>
         </div>
     </section>
+    <div class="box_search_bar">
+      <input type="text" class="search_bar" id="search_bar" placeholder="Rechercher">
+    </div>
     <div class="box_title_card">
         <p class="title_card">Nos articles</p>
+       
+        <div class="box_deroulant">
+            
+            <select id="select_prod">
+                <option value="all">All</option>
+                <option value="pc">PC</option>
+                <option value="laptop">Laptop</option>
+                <option value="ecran">Ecran</option>
+                <option value="clavier">Clavier</option>
+              </select>
+        </div>
     </div>
-    <section class="box_card">
-        <div class="card">
-            <div class="card_images">
-                <img src="/asset/2.jpg" alt="">
-            </div>
-            <div class="descrip_card">
-                <div class="card_spec">
-                    <p class="spec bold">Ryzen 5</p>
-                    <p class="spec">Nvividia 1080</p>
-                    <p class="spec">36 giga ram</p>
-                    <p class="prix" data-prix="896">896 Euros</p>
-                </div>
-                <div class="btn_card">
-                    <a href="" class="trash"><i class="fa-regular fa-trash-can"></i></a>
-                    <input type="text" class="nbr_card" value="0" id="input_card">
-                    <a href="" class="plus"><i class="fa-solid fa-plus"></i></a>
-                    <a href="" class="moins"><i class="fa-solid fa-minus"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card_images">
-                <img src="/asset/6.jpg" alt="">
-            </div>
-            <div class="descrip_card">
-                <div class="card_spec">
-                    <p class="spec bold">Ryzen 5</p>
-                    <p class="spec">Nvividia 1080</p>
-                    <p class="spec">36 giga ram</p>
-                    <p class="prix" data-prix="89">89 Euros</p>
-                </div>
-                <div class="btn_card">
-                    <a href="" class="trash"><i class="fa-regular fa-trash-can"></i></a>
-                    <input type="text" class="nbr_card" value="0" id="input_card">
-                    <a href="" class="plus"><i class="fa-solid fa-plus"></i></a>
-                    <a href="" class="moins"><i class="fa-solid fa-minus"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card_images">
-                <img src="/asset/3.jpg" alt="">
-            </div>
-            <div class="descrip_card">
-                <div class="card_spec">
-                    <p class="spec bold">Ryzen 5</p>
-                    <p class="spec">Nvividia 1080</p>
-                    <p class="spec">36 giga ram</p>
-                    <p class="prix" data-prix="1200">1200 Euros</p>
-                </div>
-                <div class="btn_card">
-                    <a href="" class="trash"><i class="fa-regular fa-trash-can"></i></a>
-                    <input type="text" class="nbr_card" value="0" id="input_card">
-                    <a href="" class="plus"><i class="fa-solid fa-plus"></i></a>
-                    <a href="" class="moins"><i class="fa-solid fa-minus"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card_images">
-                <img src="/asset/4.jpg" alt="">
-            </div>
-            <div class="descrip_card">
-                <div class="card_spec">
-                    <p class="spec bold">Ryzen 5</p>
-                    <p class="spec">Nvividia 1080</p>
-                    <p class="spec">36 giga ram</p>
-                    <p class="prix" data-prix="999">999 Euros</p>
-                </div>
-                <div class="btn_card">
-                    <a href="" class="trash"><i class="fa-regular fa-trash-can"></i></a>
-                    <input type="text" class="nbr_card" value="0" id="input_card">
-                    <a href="" class="plus"><i class="fa-solid fa-plus"></i></a>
-                    <a href="" class="moins"><i class="fa-solid fa-minus"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card_images">
-                <img src="/asset/5.jpg" alt="">
-            </div>
-            <div class="descrip_card">
-                <div class="card_spec">
-                    <p class="spec bold">Ryzen 5</p>
-                    <p class="spec">Nvividia 1080</p>
-                    <p class="spec">36 giga ram</p>
-                    <p class="prix" data-prix="719">719 Euros</p>
-                </div>
-                <div class="btn_card">
-                    <a href="" class="trash"><i class="fa-regular fa-trash-can"></i></a>
-                    <input type="text" class="nbr_card" value="0" id="input_card">
-                    <a href="" class="plus"><i class="fa-solid fa-plus"></i></a>
-                    <a href="" class="moins"><i class="fa-solid fa-minus"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card_images">
-                <img src="/asset/7.jpg" alt="">
-            </div>
-            <div class="descrip_card">
-                <div class="card_spec">
-                    <p class="spec bold">Ryzen 5</p>
-                    <p class="spec">Nvividia 1080</p>
-                    <p class="spec">36 giga ram</p>
-                    <p class="prix" data-prix="430">430 Euros</p>
-                </div>
-                <div class="btn_card">
-                    <a href="" class="trash"><i class="fa-regular fa-trash-can"></i></a>
-                    <input type="text" class="nbr_card" value="0" id="input_card">
-                    <a href="" class="plus"><i class="fa-solid fa-plus"></i></a>
-                    <a href="" class="moins"><i class="fa-solid fa-minus"></i></a>
-                </div>
-            </div>
-        </div>
+    <section class="box_card" id="box_card">
+       
     </section>
     <secction class="box_total">
-        <p class="text_total">Total à payer : <span class="total" id="text_total">1300</span></p>
+        <p class="text_total">Total a payer : <span class="total" id="text_total">0 Euros</span></p>
     </secction>
     <footer>
         <div class="contact">
-            <a href="" class="liens_contacter">Nous Contacter</a>
+          <button class="modal-btn modal-trigger liens_contacter">Nous contacter</button>
         </div>
         <div class="copyright">
             <p class="text_copyright">copyright all rights reserved</p>
@@ -175,12 +125,12 @@
         <div class="develloped">
             <p class="text_dev">Developed by :</p>
             <p class="text_dev membre">Melody Germond</p>
-            <p class="text_dev membre">thomas Gitton</p>
+            <p class="text_dev membre">Thomas Gitton</p>
             <p class="text_dev membre">Damien Buisson</p>
 
         </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="/javascript/app.js"></script>
   </body>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>

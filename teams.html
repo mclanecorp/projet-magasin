@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'équipe du magasin</title>
+
+    <link rel="stylesheet" href="/css/thomas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <p class="text2">LA BOUTIQUE</p>
+              </div>
+          </div>
+          <div class="liens_nav ">
+            <ul>
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-store" id="icones"></i>Magasin</a
+                >
+              </li>
+              <li>
+                <a href="panier.html"><i class="fa-solid fa-cart-shopping" id="icones"></i></i>Panier</a>
+              </li>
+              <li>
+                <a href="teams.html" class="active"><i class="fa-solid fa-user-group" id="icones"></i>Equipe</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu_burger">
+            <ul>
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-store" id="icones"></i>Magasin</a
+                >
+              </li>
+              <li>
+                <a href="panier.html"><i class="fa-solid fa-cart-shopping" id="icones"></i></i>Paniers</a>
+              </li>
+              <li>
+                <a href=""><i class="fa-solid fa-user-group" id="icones"></i>Equipes</a>
+              </li>
+            </ul>
+          </div>
+          <div class="burger">
+              <a href="teams.html" class="logo_burger" id="logo_burger"><i class="fa-solid fa-bars fa-2xl" style="color: #fafafa;"></i></a>
+          </div>
+        </nav>
+      </header>
+</body>
+
+<!-- modal -->
+<input type="hidden" name="activeUserId" id="activeUserId" >
+<div class="modal" id="userModal">
+    <div class="dialog dialog-lg">
+        <div class="modal-head">
+            <h5 class="modal-title">
+                Modifier un collaborateur
+            </h5>
+            <button class="close" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-selector mb-2">
+                <div class="text-center align-center">
+                    <div class="avatar-selector" data-id="female_01">
+                        <input type="radio" name="userImgageRadio" id="updateUserImgRadio_female_01" value="female_01">
+                        <label for="updateUserImgRadio_female_01">
+                            <img src="/asset/avatars/female_01.jpg" alt="Photo 1">
+                        </label>
+                    </div>
+
+                    <div class="avatar-selector" data-id="female_02">
+                        <input type="radio" name="userImgageRadio" id="updateUserImgRadio_female_02" value="female_02">
+                        <label for="updateUserImgRadio_female_02">
+                            <img src="/asset/avatars/female_02.jpg" alt="Photo 1">
+                        </label>
+                    </div>
+
+                    <div class="avatar-selector" data-id="female_03">
+                        <input type="radio" name="userImgageRadio" id="updateUserImgRadio_female_03" value="female_03">
+                        <label for="updateUserImgRadio_female_03">
+                            <img src="/asset/avatars/female_03.jpg" alt="Photo 1">
+                        </label>
+                    </div>
+
+                    <div class="avatar-selector" data-id="female_04">
+                        <input type="radio" name="userImgageRadio" id="updateUserImgRadio_female_04" value="female_04">
+                        <label for="updateUserImgRadio_female_04">
+                            <img src="/asset/avatars/female_04.jpg" alt="Photo 1">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text-center align-center">
+                    <div class="avatar-selector" data-id="male_01">
+                        <input type="radio" name="userImgageRadio" id="updateUserImgRadio_male_01" value="male_01">
+                        <label for="photo1">
+                            <img src="/asset/avatars/male_01.jpg" alt="Photo 1">
+                        </label>
+                    </div>
+
+                    <div class="avatar-selector" data-id="male_02">
+                        <input type="radio" name="userImgageRadio" id="updateUserImgRadio_male_02" value="male_02">
+                        <label for="photo1">
+                            <img src="/asset/avatars/male_02.jpg" alt="Photo 1">
+                        </label>
+                    </div>
+
+                    <div class="avatar-selector" data-id="male_03">
+                        <input type="radio" name="userImgageRadio" id="updateUserImgRadio_male_03" value="male_03">
+                        <label for="photo1">
+                            <img src="/asset/avatars/male_03.jpg" alt="Photo 1">
+                        </label>
+                    </div>
+
+                    <div class="avatar-selector" data-id="male_04">
+                        <input type="radio" name="userImgageRadio" id="updateUserImgRadio_male_04" value="male_04">
+                        <label for="photo1">
+                            <img src="/asset/avatars/male_04.jpg" alt="Photo 1">
+                        </label>
+                    </div>
+                </div>
+                <label class="form-feedback">Ce champ est requis.</label>
+            </div>
+
+            <div class="align-right mb-2 mr-2" id="randomButton">
+                <button class="btn btn-small btn-red" onclick="randomizeUser()">Générer aléatoirement</button>
+            </div>
+
+            <div class="form-control">
+                <input type="text" class="form-input" id="userNameInput" name="userNameInput" autocomplete="off" required>
+                <label for="userNameInput" class="form-label">Identité</label>
+                <label class="form-feedback">Ce champ est requis.</label>
+            </div>
+
+                
+            <div class="form-control">
+                <input type="text" class="form-input" id="userWorkInput" name="userWorkInput" autocomplete="off" required>
+                <label for="userWorkInput" class="form-label">Poste</label>
+                <label class="form-feedback">Ce champ est requis.</label>
+            </div>
+
+            <div class="form-control">
+                <input type="text" class="form-input" id="userEmailInput" name="userEmailInput" autocomplete="off" required>
+                <label for="userEmailInput" class="form-label">Adresse électronique</label>
+                <label class="form-feedback">Ce champ est requis.</label>
+            </div>
+
+            <div class="align-right">
+                <button class="btn btn-small btn-white" data-dismiss="modal">Annuler</button>
+                <button class="btn btn-small btn-red" onclick="saveUser()">Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="deleteModal">
+    <div class="dialog dialog-sm">
+        <button class="close" data-dismiss="modal"></button>
+        <div class="modal-body">
+            <div class="text-center align-center">
+                <div class="icon-circle"><i class="fa-solid fa-exclamation-triangle fa-xl text-red"></i></div>
+                
+                <p>Voulez-vous vraiment supprimer ce collaborateur ?</p>
+            </div>
+
+            <div class="align-right">
+                <button class="btn btn-small btn-white" data-dismiss="modal">Annuler</button>
+                <button class="btn btn-small btn-red" id="delete_user" onclick="deleteUser();">Oui</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
+
+<main>
+    <div class="container">
+        <h1 class="page-title">L'équipe de votre boutique</h1>
+
+        <div class="align-right">
+            <div class="form-control">
+                <input type="text" class="form-input" id="search" name="search" autocomplete="off">
+                <label for="search" class="form-label">Rechercher</label>
+            </div>
+        </div>
+        <section class="box_card" id="usersSection">
+            <a href="#!" id="addingCard" class="hover" data-toggle="modal" data-target="#userModal" data-id="-1">
+                <div class="card text-center align-center" style="height: 100%; min-height: 300px;">
+                    <div class="card_images">
+                        <div class="icon-circle"><i class="fa-solid fa-plus text-red fa-xl"></i></div>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </div>
+</main>
+
+<footer class="mt-5">
+    <div class="contact">
+        <a href="contact.html" class="liens_contacter">Nous Contacter</a>
+    </div>
+    <div class="copyright">
+        <p class="text_copyright">&copy; copyright all rights reserved</p>
+    </div>
+    <div class="develloped">
+        <p class="text_dev">Développé par :</p>
+        <p class="text_dev membre">Damien BUISSON</p>
+        <p class="text_dev membre">Melody GERMOND</p>
+        <p class="text_dev membre">Thomas GITTON</p>
+
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+<script src="/javascript/thomas.js"></script>
+</html>
