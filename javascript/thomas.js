@@ -145,17 +145,6 @@ function populateUsers(users) {
           .querySelector(`.avatar-selector[data-id="` + radio.value + `"]`)
           .classList.remove("selected");
       });
-
-      //Si on click en dehors de la fenêtre on ferme le modal
-      window.addEventListener("click", (e) => {
-        const dialog = modal.querySelector(".dialog");
-        if (!dialog.contains(e.target)) {
-          const modalId = e.target.id;
-          if (modalId !== undefined && modalId !== "") {
-            modal.dispatchEvent(closeModalEvent);
-          }
-        }
-      });
     });
 
     //Event de fermeture

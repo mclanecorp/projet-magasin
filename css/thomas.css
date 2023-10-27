@@ -497,7 +497,7 @@ a.hover > .card {
   --alert-color: black;
 }
 .alert {
-  position: absolute;
+  position: fixed;
   top: 50px;
   right: 30px;
   max-width: calc(33vw);
